@@ -1,0 +1,6 @@
+1:
+  ObjBase 单元
+  RunTo 函数有严重错误
+  WalkTo 返回失败时 MoveToMovingObject 参数错误
+  错误 m_nCurrY 被写成 m_nCurrX， 另外m_nCurrXY与 nOldXY 位置应该调换,并且该过程应该放到
+  m_nCurrX := nOldX; 上面

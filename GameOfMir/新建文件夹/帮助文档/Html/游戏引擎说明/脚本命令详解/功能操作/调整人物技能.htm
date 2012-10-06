@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>调整人物技能&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><b><font color="#0000FF">调整人物技能</font></b><br>
+<br>
+<b><font color="#0000FF">格式:</font></b><br>
+&nbsp;&nbsp;&nbsp; 增加技能&nbsp;&nbsp;&nbsp; AddSkill 技能名称 技能等级(不超过数据库设定等级)<br>
+&nbsp;&nbsp;&nbsp; 删除技能&nbsp;&nbsp;&nbsp; DelSkill 技能名称<br>
+<br>
+<b><font color="#0000FF">示例：</font></b><br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+AddSkill 魔法盾 3&nbsp;&nbsp;&nbsp; //给人物添加魔法盾技能，并升为3级<br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+DelSkill 魔法盾&nbsp;&nbsp;&nbsp; //删除人物魔法盾技能</font></p>
+
+</body>
+
+</html>

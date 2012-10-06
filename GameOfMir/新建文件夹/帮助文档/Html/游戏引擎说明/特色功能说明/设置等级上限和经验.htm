@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>设置等级上限和经验&nbsp; 功能</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><b><font color="#0000FF">设置等级上限和经验</font></b><br>
+<br>
+<font color="#0000FF"><b>功能：</b></font><br>
+&nbsp;&nbsp;&nbsp; 设置等级达到最高上限后继续增加经验，但级别不上升。<br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; SETLIMITEXPLEVEL 最高等级 达到后获得经验比例(0..100) 是否保存设置(0不保存，1保存)<br>
+&nbsp;&nbsp;&nbsp; 注：如果设为不保存，当M2重新启动后，设置将无效。<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+SETLIMITEXPLEVEL 75 10 1&nbsp;&nbsp;&nbsp; //设置最高等级为75级，满级后杀怪经验为原来的10%，并保存</font></p>
+
+</body>
+
+</html>

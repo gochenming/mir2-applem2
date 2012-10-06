@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>地图传送命令&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>检测物品数量(新)</b></font><br>
+<br>
+<font color="#0000FF"><b>功能：</b></font><br>
+&nbsp;&nbsp;&nbsp; 检测物品数量是否大于或等于指定值</font></p>
+<font face="Arial" size="2">
+<p><font size="2"><font face="Fixedsys"><strong><font color="#0000ff">格式：</font><br>
+</strong>&nbsp;&nbsp;&nbsp; 老格式&nbsp;&nbsp;&nbsp; CHECKITEM 物品名称 数量<br>
+&nbsp;&nbsp;&nbsp; 新格式&nbsp;&nbsp;&nbsp; CHECKITEMCOUNT 物品名称 控制符为(?) 数量<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+</font><font face="Fixedsys" size="2"><br>
+[@main]<br>
+#IF<br>
+CHECKITEMCOUNT 金条 ? 1</font></font><font face="Fixedsys" size="2"><br>
+#ACT<br>
+SENDMSG 5 你的金条大于或等于1<br>
+<br>
+<br>
+　</font></p>
+</font>
+
+</body>
+
+</html>

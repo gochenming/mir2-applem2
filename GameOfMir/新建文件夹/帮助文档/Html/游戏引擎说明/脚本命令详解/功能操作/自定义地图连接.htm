@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>检测是否为管理员&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys" size="2"><b><font color="#0000FF">自定义地图连接</font></b><br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; 增加连接&nbsp;&nbsp;&nbsp; AddRandomMapGate <br>
+&nbsp;&nbsp;&nbsp; 删除连接&nbsp;&nbsp;&nbsp; DelRandomMapGate</font></p>
+<p><font face="Fixedsys" size="2"><font color="#0000FF"><b>示例：</b></font><br>
+#if<br>
+#act<br>
+;命令 标识(用于删除连接时使用) 起始地图 坐标X 坐标Y 目标地图 坐标X 坐标Y 有效时间 是否显示传送门(1为显示)<br>
+AddRandomMapGate test 3 333 333 0 333 333 0 1<br>
+<br>
+<font color="#FF0000">时间以分钟为单位</font><br>
+<br>
+#if<br>
+#act<br>
+;命令 标识 起始地图名称<br>
+;另外 只有当AddRandomMapGate的有效时间设置为0时，才能使用该命令删除连接，否则地图连接会按有效时间自动删除<br>
+DelRandomMapGate test 3</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="更新日志">
+		<param name="Local" value="Html\更新日志.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="常见问题解答[2011-01-05]">
+		<param name="Local" value="Html\常见问题解答[2011-01-05].htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="游戏功能详解">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NPC脚本美化">
+			<param name="Local" value="Html\游戏引擎说明\游戏功能详解\NPC脚本美化.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="顶部滚动公告">
+			<param name="Local" value="Html\游戏引擎说明\游戏功能详解\顶部滚动公告.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="特殊功能说明">
+		<param name="Local" value="Html\main.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="增加生活技能脚本">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\增加生活技能脚本.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="还原人物属性点">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\还原人物属性点.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NPC对话框动态按钮显示方法">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\NPC对话框动态按钮显示方法.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="装备打造NPC设置方法">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\装备打造NPC设置方法.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="宝石卸下设置">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\宝石卸下设置.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="装备开光详解">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\装备开光详解.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="装备强化详解">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\装备强化详解.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="取反检测NOT">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\取反检测NOT.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="设置等级上限和经验">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\设置等级上限和经验.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="全自动攻城系统">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\全自动攻城系统.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="自定义采集系统">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\自定义采集系统.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="DB字段扩展说明">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\DB字段扩展说明.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="#CALL新调用说明">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\CALL调用说明.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="新爆率设置说明">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\爆率说明.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="宝箱配置方法">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\宝箱配置方法.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NPC对话框功能说明">
+			<param name="Local" value="Html\游戏引擎说明\特色功能说明\NPC对话框特效.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="任务系统说明">
+		<param name="Local" value="Html\main.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="任务提示说明一">
+			<param name="Local" value="Html\游戏引擎说明\任务系统说明\任务提示说明.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="任务提示说明二">
+			<param name="Local" value="Html\游戏引擎说明\任务系统说明\任务提示说明二.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="脚本命令详解">
+		<param name="Local" value="Html\main.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="脚本实例">
+			<param name="Local" value="Html\main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="任务脚本">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\脚本实例\任务脚本.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="条件检测">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测人物是否在指定范围内">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测人物是否在指定范围内.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为沙城成员">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为沙城成员.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为行会掌门">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为行会掌门.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测PK值">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测PK值.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测队伍中职业人数">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测队伍中职业人数.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为队长">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为队长.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测人物性别">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测人物性别.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测物品数量(新)">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测物品数量(新).htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测人物金币数(新)">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测人物金币数(新).htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测人物所在地图">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测人物所在地图.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检查人物等级">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检查人物等级.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为攻城状态">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为攻城状态.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测背包大小">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测背包大小.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测角色职业">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测角色职业.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为管理员">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为管理员.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="检测是否为新人">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\条件检测\检测是否为新人.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="功能操作">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="随机读取文本内容">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\随机读取文本内容.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="调整人物经验倍数">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\调整人物经验倍数.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="调整PK值">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\调整PK值.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="收取物品数量(新)">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\收取物品数量(新).htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="收取人物金币(新)">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\收取人物金币(新).htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="地图传送命令">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\地图传送命令.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="清空文本内容">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\清空文本内容.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="新扩展GIVE命令">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\新扩展GIVE命令.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="调整人物技能">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\调整人物技能.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="在线呼出游戏菜单">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\在线呼出游戏菜单.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="自定义地图连接">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\自定义地图连接.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="脚本初始化">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\脚本初始化.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="个人定时器">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\功能操作\个人定时器.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="自定义脚本常量">
+			<param name="Local" value="Html\游戏引擎说明\脚本命令详解\自定义脚本常量.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="功能触发列表">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="人物升级触发">
+			<param name="Local" value="Html\游戏引擎说明\功能触发列表\人物升级触发.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="解包物品功能调用">
+			<param name="Local" value="Html\游戏引擎说明\功能触发列表\解包物品功能调用.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="物品装备说明">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="物品代码表">
+			<param name="Local" value="Html\游戏引擎说明\物品装备说明\物品代码表.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

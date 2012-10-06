@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{3327E27C-92F3-49B9-8B89-EB3CEBA5312A}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    <Projects>
+      <Projects Name="ToolServer.exe">GameOfMir\工具\用户更新工具\ToolServer\ToolServer.bdsproj</Projects>
+      <Projects Name="UPServerSQL.exe">GameOfMir\工具\用户更新工具\SQLServer\UPServerSQL.bdsproj</Projects>
+      <Projects Name="UPServerDB.exe">GameOfMir\工具\用户更新工具\Server\UPServerDB.bdsproj</Projects>
+      <Projects Name="UPClient.exe">GameOfMir\工具\用户更新工具\Client2\UPClient.bdsproj</Projects>
+      <Projects Name="Targets">ToolServer.exe UPServerSQL.exe UPServerDB.exe UPClient.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

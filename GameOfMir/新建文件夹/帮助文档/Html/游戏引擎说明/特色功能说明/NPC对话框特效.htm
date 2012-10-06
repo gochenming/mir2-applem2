@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>NPC对话框功能说明</TITLE>
+</HEAD>
+<BODY>
+<P><STRONG style="font-weight: 400">
+<FONT size=2 face="Fixedsys" color="#0000FF">NPC对话框功能帮助说明</FONT></STRONG></P>
+<P><font face="Fixedsys" size="2"><strong><img src="../../图片和文件/NPC对话框/01.jpg" width="260" height="34"><br>
+</strong>说明：在按扭文字前面加上“&amp;”则表示使用新按扭特效 <br>
+示例：&lt;&amp;好，我马上去/@XXX&gt;</font></P>
+<P><font face="Fixedsys" size="2"><br>
+  <img src="../../图片和文件/NPC对话框/02.jpg" width="197" height="34"><br>
+  说明：改变文字显示颜色 {要改变的文字内容=FCO=(0..255)} <br>
+  示例：欢迎进入{新热血传奇=FCO=250}</font></P>
+<P><font face="Fixedsys" size="2"><br>
+    <img src="../../图片和文件/NPC对话框/03.jpg" width="56" height="47"><br>
+  说明：在对话框中显示物品信息 {参数=item} <br>
+  参数填写方法：<br>
+  　　  标识.代码(多个参数之间使用,间隔。参数可以重复使用) <br>
+  <br>
+  　　　 i.物品ID　　　示例： i.454　　说明：设置要显示的物品ID<br>
+   　　　 c.数量　　　　示例： c.1　　　说明：设置物品数量<br>
+　　　 d.天数　　　　示例： d.10　　 说明：设置物品的到期时间(单位：天)<br>
+　　　 b.代码　　　　示例： b.0　　　说明：设置物品的绑定状态(0:不可交易 1:不可存仓 2:不可修理 3:不可丢弃 4:永不掉落 5:不可强化 6:不可卖给商店 7:丢弃消失 8:未开光) <br>
+　　　 w.五行　　　　示例： w.1　　　说明：设置装备五行属性(0:无 1:金 2:木 3:水 4:火 5:土) <br>
+　　　 f.数量　　　　示例： f.3　　　说明：设置装备的凹槽数量(最大不能超过3) <br>
+　　　 s.数量　　　　示例： s.18　　 说明：设置装备可强化次数(只能为以下值 0, 3, 6, 9, 12, 15, 18)<br>
+示例：{i.454,c.1,b.0,b.4,b.7=item}</font></P>
+<P><font face="Fixedsys" size="2"><br>
+  <img src="../../图片和文件/NPC对话框/04.jpg" width="111" height="87"><br>
+说明：在对话框中调用补丁文件图像显示 {参数=img} <br>
+参数填写方法：<br>
+　　  标识.代码(多个参数之间使用,间隔。参数可以重复使用) </font> </P>
+<P><font face="Fixedsys" size="2"><br>
+　　　 f.文件代码　　示例： f.3　　　说明：设置要调用的文件<br>
+　　　　　　　　　　　　　　　　　　 代码：0:Prguse.wil 1:Prguse2.wil 2:Prguse3.wil 3:Prguse.pak <br>
+　　　　　　　　　　　　　　　　　　　　　 5:ChrSel.wil 6:mmap.wil 8:MagIcon.wil <br>
+ 　　　　　　　　　　　　　　　　　　　　　 9..16: Magic.wil..Magic8.wil 18:Magic.pak <br>
+ 　　　　　　　　　　　　　　　　　　　　　 19:Dragon.wil 20:Face.pak 21:Effect.wil<br>
+ 　　　　　　　　　　　　　　　　　　　　　 (所有补丁文件都可以调用，上面只是列举了部份常用的代码)<br>
+　　　 i.图像ID　　 示例：i.667　　　说明：设置要显示的图像ID。(支持连续显示，例如： 667-670)(如果不是连续但又需要显示多张可以使用“+”连接)<br>
+ 　　　　　　　　　　　　　　　　　　 示例：i.667+669-671+674+676 <br>
+　　　 x.数值　　　 示例: x.10 　　　说明：设置图像X坐标<br>
+　　　 y.数值　　　 示例: y.10 　　　说明：设置图像y坐标<br>
+　　　 b.0或1　　　 示例: b.1 　　　 说明：为1时，使用特效显示<br>
+　　　 p.0或1　　　 示例: p.1 　　　 说明：为1时，透明显示<br>
+　　　 m.0或1　　　 示例: m.1 　　　 说明：为1时，按照补丁里的坐标偏移自动对齐显示<br>
+　　　 t.数值　　　 示例: t.100 　　 说明：设置图像显示间隔，单位毫秒<br>
+　　　 a.0..255 　　示例: t.255 　　 说明：设置图像透明度，0..255 之间数值 <br>
+　　　 r.X+X+X+X 　 示例: r.0+0+30+30 　　 说明：设置显示图像的矩形，左+上+右+下 <br>
+示例：{f.1,i.230-239,t.100,b.1=img}</font></P>
+<P><font face="Fixedsys" size="2"><br>
+  <img src="../../图片和文件/NPC对话框/05.jpg" width="295" height="49"><br>
+  说明：设置排版坐标 {数值=x}或{数值=y} 调整排版偏移坐标 <br>
+示例：白秋琳：\{-10=y}有什么我可以帮你的？\</font></P>
+<P>　</P>
+<P><font face="Fixedsys" size="2"><BR>
+  <BR>
+</font>
+</P>
+</BODY>
+</HTML>

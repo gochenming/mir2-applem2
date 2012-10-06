@@ -1,0 +1,197 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'AppleM2NPC'#21487#35270#21270#32534#36753#22120'(20120501)'
+  ClientHeight = 616
+  ClientWidth = 1204
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = #23435#20307
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 12
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 804
+    Height = 616
+    Align = alLeft
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitWidth = 649
+    ExplicitHeight = 600
+    object GroupBox1: TGroupBox
+      Left = 0
+      Top = 0
+      Width = 804
+      Height = 616
+      Align = alClient
+      TabOrder = 0
+      ExplicitWidth = 649
+      ExplicitHeight = 600
+      object PanelBG: TPanel
+        Left = 2
+        Top = 14
+        Width = 800
+        Height = 600
+        Align = alClient
+        Caption = 'PanelBG'
+        TabOrder = 0
+        OnMouseDown = PanelBGMouseDown
+        OnMouseMove = PanelBGMouseMove
+        OnMouseUp = PanelBGMouseUp
+        ExplicitWidth = 645
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 804
+    Top = 0
+    Width = 400
+    Height = 616
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 1
+    ExplicitLeft = 884
+    object GroupBox2: TGroupBox
+      Left = 0
+      Top = 0
+      Width = 400
+      Height = 616
+      Align = alClient
+      TabOrder = 0
+      ExplicitWidth = 320
+      ExplicitHeight = 600
+      object MemoText: TMemo
+        Left = 2
+        Top = 14
+        Width = 396
+        Height = 400
+        Align = alClient
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = #23435#20307
+        Font.Style = []
+        Lines.Strings = (
+          #27979#35797#20869#23481)
+        ParentFont = False
+        ScrollBars = ssBoth
+        TabOrder = 0
+        OnChange = MemoTextChange
+        OnKeyDown = MemoTextKeyDown
+        ExplicitLeft = 22
+        ExplicitTop = 34
+        ExplicitWidth = 296
+        ExplicitHeight = 493
+      end
+      object Panel4: TPanel
+        Left = 2
+        Top = 414
+        Width = 396
+        Height = 200
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 8
+          Top = 8
+          Width = 42
+          Height = 12
+          Caption = #22270#29255'ID:'
+        end
+        object Label2: TLabel
+          Left = 8
+          Top = 38
+          Width = 30
+          Height = 12
+          Caption = #23485#24230':'
+        end
+        object Label3: TLabel
+          Left = 8
+          Top = 68
+          Width = 30
+          Height = 12
+          Caption = #39640#24230':'
+        end
+        object eImageID: TSpinEdit
+          Left = 60
+          Top = 3
+          Width = 50
+          Height = 21
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 0
+          Value = 1933
+          OnChange = eImageIDChange
+        end
+        object ckSndaMode: TCheckBox
+          Left = 8
+          Top = 180
+          Width = 97
+          Height = 17
+          Caption = #30427#22823#27169#24335
+          Checked = True
+          State = cbChecked
+          TabOrder = 1
+          OnClick = ckSndaModeClick
+        end
+        object eImageWidth: TSpinEdit
+          Left = 60
+          Top = 33
+          Width = 50
+          Height = 21
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 2
+          Value = 356
+          OnChange = eImageIDChange
+        end
+        object eImageHeight: TSpinEdit
+          Left = 60
+          Top = 63
+          Width = 50
+          Height = 21
+          MaxValue = 0
+          MinValue = 0
+          TabOrder = 3
+          Value = 149
+          OnChange = eImageIDChange
+        end
+      end
+    end
+  end
+  object Device: TDX9Device
+    Width = 300
+    Height = 344
+    BitDepth = bdLow
+    Refresh = 0
+    Windowed = True
+    VSync = False
+    HardwareTL = True
+    LockBackBuffer = True
+    DepthBuffer = True
+    WindowHandle = 0
+    OnInitialize = DeviceInitialize
+    OnFinalize = DeviceFinalize
+    OnRender = DeviceRender
+    OnNotifyEvent = DeviceNotifyEvent
+    AutoInitialize = False
+    Left = 24
+    Top = 40
+  end
+  object TimerDraw: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerDrawTimer
+    Left = 56
+    Top = 40
+  end
+end

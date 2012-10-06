@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=help1.chm
+Contents file=Contents.hhc
+Default Window=Jason
+Default topic=Html\更新日志.htm
+Display compile progress=No
+Full-text search=Yes
+Language=0x804 中文(中国)
+Title=ETM2帮助文档(2010-08-22)
+
+[WINDOWS]
+Jason="ETM2帮助文档(2010-08-22)","Contents.hhc",,"Html\更新日志.htm",,,,,,0x22520,,0x3006,,,,,,,,0
+
+
+[INFOTYPES]
+

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>还原人物属性点&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>还原人物属性点</b></font><br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; RESETNAKEDABILPOINT 重置点数<br>
+<br>
+<b><font color="#0000FF">示例：</font></b><br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+RESETNAKEDABILPOINT 1000&nbsp;&nbsp;&nbsp; //点数设为大于65535将还原人物所有属性点<br>
+SENMSG 5 成功还原1000属性点<br>
+<br>
+<font color="#0000FF"><b>数据库设置：</b></font><br>
+<br>
+洗点珠设置<br>
+Stdmode = 3<br>
+Shape = 18<br>
+DuraMax = 要还原的点数<br>
+<br>
+<font color="#FF0000">附完整数据库设置，请自行导入</font><br>
+<br>
+729;洗髓丹;3;18;1;0;0;0;1100;0;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10000;人物属性点重新分配之灵丹妙药\使用后可&lt;自定义重新分配10点属性/FCOLOR=$FF00&gt;;15;</font></p>
+
+</body>
+
+</html>

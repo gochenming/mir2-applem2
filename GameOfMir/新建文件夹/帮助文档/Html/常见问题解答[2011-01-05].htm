@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>常见问题解答&nbsp; 以下是用户在使用361引擎当中所常见的一些问题的</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font size="5"><b><font color="#0000FF">常见问题解答</font><br>
+<br>
+</b></font>以下是用户在使用361引擎当中所常见的一些问题的解答，以后会陆续添加<font size="5"><b><br>
+<br>
+</b></font>Q：开新区如何清理数据。<br>
+<font color="#660066">A：此版目前只能手动清理数据，需要清理的地方有<br>
+MirServer\DBServer\DB\<br>
+MirServer\LoginSrv\DB\<br>
+MirServer\LogServer\BaseDir\<br>
+MirServer\Mir200\ConLog\<br>
+MirServer\Mir200\Log\<br>
+MirServer\Mir200\Castle\0\SabukW.txt 用SabukW.bak替换沙城信息<br>
+MirServer\Mir200\Global.ini (天下第一数据) 删除Global.ini文件，运行M2后会生成干净文件</font><br>
+<br>
+Q：为什么商业端里没有M2Server.exe？<br>
+<font color="#660066">A：商业M2只能通过工具包中的361M2下载工具进行下载，打开361M2下载工具必须输入VIP帐号密码才能下载。<br>
+下载后真接复制到Mir200文件夹下。</font><br>
+<br>
+<br>
+Q：我现在还没租服务器，M2可以不验证单机测试吗？<br>
+<font color="#660066">A：商业M2不可以单机测试，只能绑定机器后才能使用。<br>
+如想修改版本，请去官网下载测试版本架设后，用商业端替换Envir下所有文件再进行修改。<br>
+版本修改完后，再替换商业端Envir文件夹。</font><br>
+<br>
+Q：攻沙时间在哪里修改？<br>
+<font color="#660066">A：MirServer\Mir200\Envir\DefiniensConst.txt<br>
+修改攻沙设置，设置后全自动操作。不用再手动添加行会。</font><br>
+<br>
+Q：服务器运行状态下，修改DefiniensConst.txt后怎么加载？<br>
+<font color="#660066">A：M2--按制--重新加载--脚本常量列表</font><br>
+<br>
+Q：我要取消离线挂机如何设置？<br>
+<font color="#660066">A：M2--选项--参数设置--游戏选项(1)--游戏模式--取消安全区脱机的勾 （后面数字代表多少等级才允许挂机）</font><br>
+<br>
+Q：M2是如何才算绑定成功？<br>
+<font color="#660066">A：M2运行后会提示输入VIP注册信息，输入正确后才算绑定成功。<br>
+绑定后下次运行就不用再输入了。</font><br>
+<br>
+Q：游戏中的点卷如何获得？<br>
+<font color="#660066">A：点卷只能在SQL版本中使用，DB版中无效。</font><br>
+<br>
+Q：游戏积分是怎么来的？<br>
+<font color="#660066">A：游戏积分也属于SQL版本中才用到的，但可以用灵符命令调用。</font><br>
+<br>
+Q：如何开启游戏排行榜<br>
+<font color="#660066">A：运行MirServer\Mir200\PlugTop.exe 运行后等M2Server.exe 
+DBServer.exe 连接正常后，再点手动刷新就可以了。</font><br>
+<br>
+Q：版本如何加密？<br>
+<font color="#660066">A：开始--运行--将M2Server.exe拖到运行输入框中，再在后面空格，加一个-e的参数，点确定。<br>
+如：D:\MirServer\Mir200\M2Server.exe -e<br>
+等M2完全启动后再关闭，这时候版本里与之相关的文件全部会加密。<br>
+注：自行备份好明文版，版本一旦加密无法解密。</font><br>
+<br>
+Q：打开登陆器运行游戏时，提示进入游戏失败，客户端文件丢失！<br>
+<font color="#660066">
+A：这是由于客户端下361Client.dat被杀软误杀造成，暂停杀软或添加为信用文件，重新打开登陆器生存文件后可解决此问题。<br>
+<br>
+</font>Q：如何清除天下第一及全局变量<font color="#660066"><br>
+A：删除Mir200\Global.ini文件，M2运行后会重新生成一份干净Global.ini全局数据<br>
+<br>
+</font>Q：药品自动解包设置<br>
+<font color="#660066">A：以打捆疗伤药为例：<br>
+设置数据库StdItems.DB的Shape字段值为MirServer\Mir200\Envir\UnbindList.txt对应的解包号。<br>
+如设置打捆疗伤药的StdItems.DB的Shape值为114；<br>
+对应的UnbindList.txt里设置<br>
+114 疗伤药<br>
+然后StdItems.DB里疗伤药的Reserved字段值设置成打捆疗伤药的物品ID号；<br>
+如打捆疗伤药的物品ID为478，那么疗伤药的Reserved字段值就填478<br>
+如需包内打捆疗伤药自动解包则需先使用一个疗伤药后系统才会帮你解包。</font><br>
+<br>
+Q：新手上线地图设置方法<br>
+<font color="#660066">A：系统默认读取MirServer\Mir200\Envir\StartPoint.txt的第一行安全区配置为新人上线地图<br>
+如要设成多个新人上线地图则需在M2--选项--参数设置--座标范围--新人出生点范围数设成你想要的几个<br>
+系统会根据出生点范围自动读取StartPoint.txt的前面几个为新人上线地图<br>
+如范围设置成2，则系统会读取StartPoint.txt的前两项为新人上线地图，以此类推。</font></font></p>
+
+</body>
+
+</html>

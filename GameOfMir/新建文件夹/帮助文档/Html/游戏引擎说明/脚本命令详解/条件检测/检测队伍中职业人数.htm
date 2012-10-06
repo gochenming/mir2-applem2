@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>检测人物性别&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys" size="2"><font color="#0000FF"><b>检测队伍中职业人数</b></font><br>
+<br>
+<b><font color="#0000FF">格式：</font></b><br>
+&nbsp;&nbsp;&nbsp; CHECKGROUPJOBCOUNT 职业(战.法.道 0.1.2) 符号(&gt;,&lt;,=,?) 数量 符号(&gt;,&lt;,=,?) 
+等级<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+<br>
+[@main]<br>
+#IF<br>
+CHECKGROUPJOBCOUNT 0 &gt; 1 &gt; 45&nbsp;&nbsp; //检测是否为战士,人数是否大于1,等级是否大于45级<br>
+#ACT<br>
+SENDMSG 5 条件满足<br>
+#ELSEACT<br>
+SENDMSG 5 条件不满足</font></p>
+
+</body>
+
+</html>

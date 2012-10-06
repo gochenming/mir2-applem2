@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>自定义脚本常量</TITLE>
+</HEAD>
+<BODY>
+<P><STRONG><FONT size=2 face="Fixedsys" color="#0000FF">自定义脚本常量</FONT></STRONG></P>
+<P><font face="Fixedsys" size="2"><strong><font color="#0000FF">配置文件位置</font><br>
+</strong>Mir200\Envir\DefiniensConst.txt</font></P>
+<P><font face="Fixedsys" size="2"><font color="#0000FF"><strong>配置文件格式</strong></font><br>
+;常量名称 &nbsp;&nbsp;&nbsp;&nbsp;常量内容<br>
+游戏名称 &nbsp;&nbsp;&nbsp;&nbsp; 热血传奇<br>
+城市传送费用 &nbsp;2000</font></P>
+<P><font face="Fixedsys" size="2"><strong><font color="#0000FF">脚本使用范例</font><br>
+</strong>[@Main]<br>
+欢迎进入[$游戏名称]\<br>
+&lt;传送/@goto&gt;</font></P>
+<P><font face="Fixedsys" size="2">[@goto]<br>
+#if<br>
+CheckGold [$城市传送费用]<br>
+#ACT<br>
+MAPMOVE 3<br>
+#ELSEACT<br>
+MESSAGEBOX 你的金币不够</font></P>
+<P>　</P>
+<P>&nbsp; </P>
+</BODY>
+</HTML>

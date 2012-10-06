@@ -1,0 +1,100 @@
+SetByteStatus(UserItem.btValue[tb_Status], Is 
+
+CheckByteStatus(UserItem.btValue[tb_Status], Is_ 
+
+  tb_Hit = 0; //准确     武器原值 5
+  tb_Speed = 1; //敏捷
+  tb_Source = 2; //强度
+  tb_AntiMagic = 3; //魔法躲避
+  tb_PoisonMagic = 4; //毒物躲避
+  tb_HealthRecover = 5; //体力恢复
+  tb_SpellRecover = 6; //魔法恢复
+  tb_PoisonRecover = 7; //中毒恢复
+  tb_HitSpeed = 8; //速度     武器原值 6
+  tb_Luck = 9; //幸运     原值 3
+  tb_WuXin = 10; //五行
+  tb_BindMode = 11; //绑定状态
+  tb_AddAttack = 12; //攻击加成
+  tb_DelDamage = 13; //伤害吸收
+  tb_flutecount = 14; //凹槽数量
+  tb_Status = 15; //装备状态
+  tb_Reserved = 16;
+  tb_unknown1 = 17; //未知
+  tb_Count = 18;
+
+  Is_Lock = 0;  //不允许取下
+  Is_UnKnow = 1;  //神秘装备
+  Is_Shine = 2;  //发光
+
+GetHitStruckDamage
+GetMagStruckDamage
+
+
+procedure SetByteStatus(var Value: Byte; btValType: Byte; Status: Boolean);
+function CheckByteStatus(Value, btValType: Byte): Boolean;
+
+implementation
+
+function CheckByteStatus(Value, btValType: Byte): Boolean;
+begin
+  Result := False;
+  if ((128 shr btValType) and (Value)) <> 0 then Result := True;
+end;
+
+procedure SetByteStatus(var Value: Byte; btValType: Byte; Status: Boolean);
+begin
+  if Status then Value := (128 shr btValType) or (Value)
+  else Value := (not (128 shr btValType)) and (Value);
+end;
+
+DelBagItem
+
+永不掉落
+不可存仓
+不可修理
+不可交易，不可摆摊
+不可丢弃，丢弃消失
+不可升级打造
+
+
+
+
+
+TPlayObject.ClientUserSellItem 出售物品
+TPlayObject.ClientDropItem 扔物品
+TPlayObject.ClientAddDealItem 交易物品
+TPlayObject.ClientStorageItem 存仓库
+TPlayObject.ScatterBagItems 死亡掉落
+TPlayObject.ScatterBagItems 打造物品
+
+QuestTakeCheckItem
+
+111..121, 135, 138..145, 150..162
+170..172, 180..183
+
+if StdItem.Shape = 123 boRecallSuite1 := True;
+if StdItem.Shape = 127  boSpirit1 := True;
+if StdItem.Shape = 122  boRecallSuite2 := True;
+if StdItem.Shape = 128 boSpirit2 := True;
+if StdItem.Shape = 133 then begin
+      boMoXieSuite2 := True;
+      Inc(m_nMoXieSuite, StdItem.AniCount);
+    end;
+    if StdItem.Shape = 136 then begin
+      boHongMoSuite2 := True;
+      Inc(m_nHongMoSuite, StdItem.AniCount);
+    end;
+if StdItem.Shape = 124  boRecallSuite3 := True;
+    if StdItem.Shape = 126  boSpirit3 := True;
+
+if StdItem.Shape = 134 then begin
+      boMoXieSuite3 := True;
+      Inc(m_nMoXieSuite, StdItem.AniCount);
+    end;
+    if StdItem.Shape = 137 then begin
+      boHongMoSuite3 := True;
+      Inc(m_nHongMoSuite, StdItem.AniCount);
+    end;
+
+if StdItem.Shape = 125  boRecallSuite4 := True;
+    if StdItem.Shape = 129  boSpirit4 := True;

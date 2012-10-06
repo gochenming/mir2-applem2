@@ -1,0 +1,12 @@
+已发现 DBserver TFrmDBSrv.ProcessServerPacket处，对接收消息处理有严重内存错误，待修正
+在处理完消息后，重整消息数据时，待检验
+参照SEdition
+
+估计其它程序有可能出现同样的错误
+注意检查M2，Logsrv, RunGate
+
+2009-11-11
+
+2009-11-16
+
+发送数据失败，延时发送数据要重新检测代码
