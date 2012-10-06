@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>发送文字信息&nbsp; 功能</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>发送文字信息</b></font><br>
+<br>
+<font color="#0000FF"><b>功能：</b></font><br>
+&nbsp;&nbsp;&nbsp; 利用NPC发送文字信息<br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; SENDMSG 信息编号 信息内容<br>
+<br>
+<font color="#0000FF"><b>信息编号：</b></font><br>
+&nbsp;&nbsp;&nbsp; 0、全服消息<br>
+&nbsp;&nbsp;&nbsp; 1、全服消息，前面带 (*)<br>
+&nbsp;&nbsp;&nbsp; 2、全服消息，前面带 [NPC名字]<br>
+&nbsp;&nbsp;&nbsp; 3、全服消息，前面带 [人物名字]<br>
+&nbsp;&nbsp;&nbsp; 4、发布在NPC头顶的普通文字信息<br>
+&nbsp;&nbsp;&nbsp; 5、发送给自己的红色信息<br>
+&nbsp;&nbsp;&nbsp; 6、发送给自己的绿色信息<br>
+&nbsp;&nbsp;&nbsp; 7、发送给自己的蓝色信息<br>
+&nbsp;&nbsp;&nbsp; 8、全服顶部滚动消息<br>
+<br>
+<font color="#FF0000">&nbsp;&nbsp;&nbsp; 信息内容中可根据个人需要添加以下字符<br>
+&nbsp;&nbsp;&nbsp; %s&nbsp;&nbsp;&nbsp; 人物名称<br>
+&nbsp;&nbsp;&nbsp; %x&nbsp;&nbsp;&nbsp; 坐标X<br>
+&nbsp;&nbsp;&nbsp; %y&nbsp;&nbsp;&nbsp; 坐标Y<br>
+&nbsp;&nbsp;&nbsp; %m&nbsp;&nbsp;&nbsp; 地图名称<br>
+&nbsp;&nbsp;&nbsp; %d&nbsp;&nbsp;&nbsp; NPC名称</font><br>
+<br>
+<b><font color="#0000FF">示例：</font></b><br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+SENDMSG 0 信息内容<br>
+SENDMSG 1 信息内容<br>
+SENDMSG 2 信息内容<br>
+SENDMSG 3 信息内容<br>
+SENDMSG 4 信息内容<br>
+SENDMSG 5 信息内容<br>
+SENDMSG 6 信息内容<br>
+SENDMSG 7 信息内容<br>
+SENDMSG 8 信息内容</font></p>
+
+</body>
+
+</html>

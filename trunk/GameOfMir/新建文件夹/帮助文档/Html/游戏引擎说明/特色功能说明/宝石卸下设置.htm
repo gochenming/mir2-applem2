@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>地图传送命令&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>宝石卸下设置</b></font><br>
+<br>
+<b><font color="#0000FF">功能：</font></b><br>
+&nbsp;&nbsp;&nbsp; 可将装备凹槽中的宝石取下<br>
+<br>
+</font><font face="Fixedsys" size="2"><strong><font color="#0000ff">格式：</font></strong><br>
+&nbsp;&nbsp;&nbsp; 脚本头添加(@ArmRemoveStone)<br>
+&nbsp;&nbsp;&nbsp; NPC对话按钮&nbsp;&nbsp;&nbsp; &lt;&amp;卸下宝石/@ArmRemoveStone&gt;<br>
+&nbsp;&nbsp;&nbsp; 点击后调用卸下宝石对话框进行操作<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+<br>
+(@ArmRemoveStone)</font><font face="Arial" size="2"><font face="Fixedsys" size="2"><br>
+[@main]<br>
+</font><font face="Fixedsys" size="2">　有什么我可以帮你的。\ \<br>
+</font></font><font face="Fixedsys" size="2">&lt;&amp;卸下宝石/@ArmRemoveStone&gt;\<br>
+</font><font face="Fixedsys">&lt;&amp;关闭/@exit&gt;\<br>
+<br>
+<font color="#0000FF"><b>数据库设置：<br>
+</b></font><br>
+在物品数据库StdItems.DB里设置如下：<br>
+卸下宝石道具<br>
+Stdmode = 46<br>
+Shape = 9<br>
+<br>
+<font color="#FF0000">附数据库详细DB，如有需要请自行导入</font><br>
+<br>
+730;混元锤;46;9;1;0;0;0;10152;0;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;10000;集天地灵气于一身混元锤\找&lt;龙五大爷/FCOLOR=$FF00&gt;可卸下装备凹槽上的宝石;15;</font></p>
+
+</body>
+
+</html>

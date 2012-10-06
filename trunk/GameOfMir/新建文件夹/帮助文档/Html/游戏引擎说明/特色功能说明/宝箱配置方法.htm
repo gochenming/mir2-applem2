@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>宝箱配置方法&nbsp; 宝箱分为两种</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b><font size="2">宝箱配置方法</font></b></font><font size="2"><font color="#0000FF"><br>
+<br>
+<b>宝箱分为两种：</b></font><br>
+<br>
+一种是物品宝箱在StdItems.DB里设置；一种是怪物宝箱，直接分散在地图上的那种在Monster.DB里设置。<br>
+<br>
+<font color="#800080">1、StdItems.DB中Anicount字段值如果为0时则开起转动抽取物品；如为100时，不通过转动，打开宝箱直接给物品。<br>
+Source字段值对应D:\MirServer\Mir200\Envir\BoxList.txt，宝箱设置文件在Envir\Boxs\文件夹下。<br>
+<br>
+2、Monster.DB中Lvl字段值对应D:\MirServer\Mir200\Envir\BoxList.txt<br>
+CoolEye字段值跟StdItems.DB的Anicount值一样为0-100</font><br>
+<br>
+<font color="#0000FF">
+<b>宝箱文本头说明：</b></font><br>
+机率0-100 0代表100%参与抽奖，数字越大参与的可能性越小<br>
+<br>
+机率&nbsp; 金币&nbsp; 元宝&nbsp; 机率&nbsp; 金币&nbsp; 元宝&nbsp; 机率&nbsp; 金币&nbsp; 元宝&nbsp; 
+机率&nbsp; 金币&nbsp; 元宝<br>
+&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 
+70&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp; 
+0&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 
+20</font></font></p>
+
+</body>
+
+</html>

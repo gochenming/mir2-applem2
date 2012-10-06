@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>检测角色职业&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>检测角色职业</b></font><br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; CHECKJOB 职业(战士：Warrior；法师：Wizard，道士：Taoist)<br>
+<br>
+<b><font color="#0000FF">示例：</font></b><br>
+<br>
+[@main]<br>
+#IF<br>
+CHECKJOB Warrior<br>
+#ACT<br>
+MESSAGEBOX 你是战士<br>
+BREAK<br>
+<br>
+#IF<br>
+CHECKJOB Wizard<br>
+#ACT<br>
+MESSAGEBOX 你是法师<br>
+BREAK<br>
+<br>
+#IF<br>
+CHECKJOB Taoist<br>
+#ACT<br>
+MESSAGEBOX 你是道士</font></p>
+
+</body>
+
+</html>

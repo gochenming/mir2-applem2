@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>任务脚本</TITLE>
+</HEAD>
+<BODY>
+<P><STRONG><FONT size=5>任务脚本</FONT></STRONG></P>
+<P><strong>相关命令</strong><br>
+  CHECKMISSIONCOUNT 检查任务列表可增加数量 CHECKMISSIONCOUNT (&gt;,&lt;,=) 数量 <BR>
+ADDMISSION 增加一个任务 ADDMISSION 任务索引(0-99) <a href="../../任务系统说明/任务提示说明.htm">任务标识名称</a> <br>
+DELMISSION 删除一个任务 DELMISSION 任务索引(0-99) <br>
+UPDATEMISSION 更新一个任务 UPDATEMISSION 任务索引(0-99) <a href="../../任务系统说明/任务提示说明.htm">任务标识名称</a> </P>
+<P>CHECKMISSIONKILLMONCOUNT 检查任务杀怪数量 CHECKMISSIONKILLMONCOUNT 任务索引(0-99) <a href="../../任务系统说明/任务提示说明.htm">杀怪记数(1或2)</a>  (&gt;,&lt;,=) 数量 <br>
+  CHANGEMISSIONKILLMONCOUNT 改变任务杀怪数量 CHANGEMISSIONKILLMONCOUNT 任务索引(0-99) <a href="../../任务系统说明/任务提示说明.htm">杀怪记数(1或2)</a> (+,-,=) 数量 </P>
+<P>CHECKARITHMOMETERCOUNT 检查循环次数 CHECKARITHMOMETERCOUNT 循环记数(0-19) (&gt;,&lt;,=) 次数 <br>
+CHANGEARITHMOMETERCOUNT 改变循环次数 CHANGEARITHMOMETERCOUNT 循环记数(0-19) (+,-,=) 次数<br>
+(循环计数每天0点会自动复位为0)</P>
+<P>CHECKMISSION 检查变量标识状态 CHECKMISSION [101-799] 0或1 (101以前的变量为M2预留，自己编写脚本请从101开始)<br>
+SETMISSION 设置变量标识状态 SETMISSION [101-799] 0或1  (101以前的变量为M2预留，自己编写脚本请从101开始)<br>
+RESETMISSION 批量设置变量标识状态 RESETMISSION [101-799] 数量  (101以前的变量为M2预留，自己编写脚本请从101开始)</P>
+<P><strong>示例：</strong><br>
+[@Main]<br>
+&lt;检查任务列表剩余数量/@checkmissioncount&gt;\<br>
+&lt;增加任务/@addmission&gt;\<br>
+&lt;删除任务/@delmission&gt;\<br>
+&lt;更新任务/@updatemission&gt;\<br>
+&lt;检查1和2杀怪记数/@checkkillmon&gt;\<br>
+&lt;增加1和2杀怪记数/@changekillmon&gt;\<br>
+&lt;循环计数/@arithmometer&gt;\
+<br>
+&lt;任务标识/@missionflag&gt;</P>
+<P>[@checkmissioncount]<br>
+#IF<br>
+CHECKMISSIONCOUNT &gt; 0<br>
+#SAY<br>
+可以接受新的任务<br>
+#ELSESAY<br>
+ 任务列表已满	</P>
+<P>[@addmission]<br>
+#ACT<br>
+ADDMISSION 1 测试任务</P>
+<P>[@delmission]<br>
+#ACT<br>
+DELMISSION 1</P>
+<P>[@updatemission]<br>
+#ACT<br>
+  UPDATEMISSION 1 测试任务2</P>
+<P>[@checkkillmon]<br>
+#IF<br>
+CHECKMISSIONKILLMONCOUNT 1 1 &gt; 10<br>
+  #SAY<br>
+任务索引1杀怪记数1大于10</P>
+<P>#IF<br>
+CHECKMISSIONKILLMONCOUNT 1 2 &gt; 20<br> 
+ #SAY<br>
+任务索引1杀怪记数2大于10</P>
+<P>[@changekillmon]<br>
+#ACT<br>
+CHANGEMISSIONKILLMONCOUNT 1 1 + 10 <br>
+CHANGEMISSIONKILLMONCOUNT 1 2 + 10</P>
+<P>[@arithmometer]<br>
+#IF<br>
+CHECKARITHMOMETERCOUNT 0 &lt; 1<br>
+#ACT<br>
+CHANGEARITHMOMETERCOUNT 0 + 1<br>
+#ELSEACT<br>
+已经增加1点循环计数了</P>
+<P>[@missionflag]<br>
+#IF<br>
+CHECKMISSION [100] 0<br>
+  #ACT<br>
+  SETMISSION [100] 1<br>
+  RESETMISSION [101] 7
+</P>
+<P>&nbsp; </P>
+</BODY>
+</HTML>

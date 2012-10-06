@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>任务提示说明</TITLE></HEAD>
+<BODY>
+<P><strong><font size="5">任务提示文本说明</font></strong></P>
+<P><strong>配置文件位置</strong><BR>
+Mir200\Envir\MissionDesc.txt</P>
+<P><strong>配置文件格式 </strong>(以下信息，最好结合配置实例进行理解) <br>
+{}当中内容特殊设置方法</P>
+<P><br>
+  支持NPC显示特效，详细参照<a href="../特色功能说明/NPC对话框特效.htm">NPC特效显示</a><br>
+</P>
+<P>说明：显示循环变量信息　　　　　　格式：&lt;^ARH(<a href="../脚本命令详解/脚本实例/任务脚本.htm">循环变量(0..19)</a>)&gt;<br>
+  说明：跟据职业显示信息　　　　　　格式：&lt;^BJOB(战士,法师,道士)&gt;<br>
+  说明：跟据性别显示信息　　　　　　格式：&lt;^BSEX(男,女)&gt;<br>
+  说明：跟据职业和性别显示信息　　　格式：&lt;^BJS(战士男,战士女,法师男,法师女,道士男,道士女)&gt;<br>
+  说明：跟据任务标识变量显示信息　　格式：&lt;^FLAG(<a href="../脚本命令详解/脚本实例/任务脚本.htm">任务标识0..799</a>,标识为0,标识为1)&gt;<br>
+  说明：跟据杀怪计数1是否完成显示　 格式：&lt;^CMON1(已完成,未完成)&gt;<br>
+  说明：跟据杀怪计数2是否完成显示　 格式：&lt;^CMON2(已完成,未完成)&gt;<br>
+  说明：跟据需要物品1是否完成显示　 格式：&lt;^CITEM1(已完成,未完成)&gt;<br>
+  说明：跟据需要物品2是否完成显示　 格式：&lt;^CITEM2(已完成,未完成)&gt;<br>
+  说明：跟据需要物品3是否完成显示　 格式：&lt;^CITEM3(已完成,未完成)&gt;<br>
+  说明：显示杀怪计数1已完成数量　　 格式：&lt;^KILLMON1&gt;<br>
+  说明：显示杀怪计数2已完成数量　　 格式：&lt;^KILLMON2&gt;<br>
+  说明：显示杀怪计数1需要完成数量　 格式：&lt;^MAXKILLMON1&gt;<br>
+  说明：显示杀怪计数2需要完成数量　 格式：&lt;^MAXKILLMON2&gt;<br>
+  说明：显示需要物品1已完成数量　　 格式：&lt;^ITEMCOUNT1&gt;<br>
+  说明：显示需要物品2已完成数量　　 格式：&lt;^ITEMCOUNT2&gt;<br>
+  说明：显示需要物品3已完成数量　　 格式：&lt;^ITEMCOUNT3&gt;<br>
+  说明：显示需要物品1数量　 　 　 　格式：&lt;^MAXITEMCOUNT1&gt;<br>
+  说明：显示需要物品2数量　 　 　 　格式：&lt;^MAXITEMCOUNT2&gt;<br>
+说明：显示需要物品3数量　 　 　 　格式：&lt;^MAXITEMCOUNT3&gt;</P>
+<P>&nbsp;</P>
+<P><strong>小地图下方任务提示信息设置</strong><br>
+设置内容同样是放在{}当中</P>
+<P>命令：#WRITE(输出一条提示信息)<br>
+  示例：#WRITE 
+找&lt;白秋琳/@move(新手村,131,136)&gt;向她请教</P>
+<P>命令：#IF CHECKFLAG 任务标识变量 0或1 (判断任务标识变量的值)<br>
+  示例：<br>
+  　　#IF CHECKFLAG 100 1 -------------------&gt; 判断任务标识100是否为1<br>
+  　　　#WRITE 任务标识变量100值为1 ----------&gt; 如果标识为1则输出该条信息 <br>
+　　#ENDIF --------------------------------&gt; 必需使用，结束#IF </P>
+<P>命令：#IF KILLMONCOMPLETE 1或2 TRUE或FALSE (判断杀怪计数是否完成或未完成)<br>
+示例：<br>
+　　#IF KILLMONCOMPLETE 1 TRUE ------------&gt; 判断杀怪计数1是否已完成<br>
+　　　#WRITE 已完成 ------------------------&gt; 如果已完成则输出该条信息 <br>
+　　#ENDIF --------------------------------&gt; 必需使用，结束#IF </P>
+<P>命令：#IF ITEMCOUNTCOMPLETE 1或2或3 TRUE或FALSE (判断需要的物品是否完成或未完成)<br>
+示例：<br>
+　　#IF ITEMCOUNTCOMPLETE 1 TRUE ----------&gt; 判断需要的物品1是否已完成<br>
+　　　#WRITE 已完成 ------------------------&gt; 如果已完成则输出该条信息 <br>
+　　#ENDIF --------------------------------&gt; 必需使用，结束#IF </P>
+<P>多条#IF结合使用<br>
+  示例：<br>
+  　　#IF CHECKFLAG 100 1 -------------------&gt; 判断任务标识100是否为1<br>
+  　　#IF KILLMONCOMPLETE 1 TRUE ------------&gt; 判断杀怪计数1是否已完成<br>
+  　　#IF ITEMCOUNTCOMPLETE 1 TRUE ----------&gt; 判断需要的物品1是否已完成<br>
+  　　　#WRITE 三条#IF都符合要求 -------------&gt; 如果符全要求则输出该条信息 <br>
+  　　#ENDIF --------------------------------&gt; 必需使用，结束#IF(多条#IF只需要一条#ENDIF)<br>
+  <br>
+  <br>
+</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp; </P>
+</BODY>
+</HTML>

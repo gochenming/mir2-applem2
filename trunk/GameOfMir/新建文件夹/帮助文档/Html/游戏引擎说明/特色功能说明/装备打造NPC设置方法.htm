@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>地图传送命令&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><b><font color="#0000FF">装备打造NPC设置方法</font></b><br>
+<br>
+<b><font color="#0000FF">功能：</font></b><br>
+&nbsp;&nbsp;&nbsp; 可以不使用生活技能面板里的装备打造，直接用NPC调用。原生活技能控制打造功能的限制都将失效。<br>
+<br>
+</font><font face="Fixedsys" size="2"><strong><font color="#0000ff">格式：</font></strong><br>
+&nbsp;&nbsp;&nbsp; 脚本头添加(@makedrug)<br>
+&nbsp;&nbsp;&nbsp; NPC对话框按钮&nbsp;&nbsp;&nbsp; &lt;&amp;打造服装/@makedrug&gt;<br>
+&nbsp;&nbsp;&nbsp; 脚本尾部添加<br>
+&nbsp;&nbsp;&nbsp; [MakeItems]&nbsp;&nbsp;&nbsp; //设定当前NPC里可打造的装备列表<br>
+&nbsp;&nbsp;&nbsp; $头盔 $战士专用 雷霆头盔<br>
+&nbsp;&nbsp;&nbsp; $头盔 $法师专用 烈焰头盔<br>
+&nbsp;&nbsp;&nbsp; $头盔 $道士专用 光芒头盔<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+<br>
+<font color="#0000FF">;脚本头</font><br>
+(@makedrug)<br>
+<br>
+<font color="#0000FF">;NPC脚本</font></font><font face="Arial" size="2"><font face="Fixedsys" size="2"><br>
+[@main]<br>
+</font><font face="Fixedsys" size="2">　有什么我可以帮你的。\ \<br>
+</font></font><font face="Fixedsys" size="2">&lt;&amp;打造服装/@makedrug&gt;\<br>
+</font><font face="Fixedsys">&lt;&amp;关闭/@exit&gt;\<br>
+<br>
+<font color="#0000FF">;脚本尾部</font><br>
+</font><font face="Fixedsys" size="2">[MakeItems]<br>
+$头盔 $战士专用 雷霆头盔<br>
+$头盔 $法师专用 烈焰头盔<br>
+$头盔 $道士专用 光芒头盔<br>
+$男性服装 $战士专用 雷霆战甲(男)<br>
+$男性服装 $法师专用 烈焰魔衣(男)<br>
+$男性服装 $道士专用 光芒道袍(男)<br>
+$女性服装 $战士专用 雷霆战甲(女)<br>
+$女性服装 $法师专用 烈焰魔衣(女)<br>
+$女性服装 $道士专用 光芒道袍(女)<br>
+$腰带 $战士专用 雷霆腰带<br>
+$腰带 $法师专用 烈焰腰带<br>
+$腰带 $道士专用 光芒腰带<br>
+$靴子 $战士专用 雷霆战靴<br>
+$靴子 $法师专用 烈焰魔靴<br>
+$靴子 $道士专用 光芒道靴<br>
+<br>
+<font color="#800080">其它装备打造跟示例一样，只需更改打造名，如：&lt;&amp;打造武器/@makedrug&gt; &lt;&amp;打造项链/@makedrug&gt;等<br>
+脚本尾部写上你当前NPC可打造的装备列表即可。<br>
+<br>
+按照上述上方法设置后MirServer\Mir200\Envir\MakeMagic.txt的列表将不再读取<br>
+转为直接读取MirServer\Mir200\Envir\MakeItem.txt下的内容</font><br>
+　</font></p>
+
+</body>
+
+</html>

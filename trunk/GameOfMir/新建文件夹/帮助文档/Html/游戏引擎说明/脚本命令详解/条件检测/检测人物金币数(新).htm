@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>地图传送命令&nbsp; 格式</title>
+</head>
+
+<body>
+
+<font size="2" face="Fixedsys" color="#0000FF">
+<p><b>检测人物金币数(新)</b></p>
+</font><font face="Arial" size="2">
+<p><font size="2"><font face="Fixedsys"><strong><font color="#0000ff">格式：</font><br>
+</strong>&nbsp;&nbsp;&nbsp; CHECKGOLD 金币数量 BIND(参数BIND为检测绑定金币)<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+</font><font face="Fixedsys" size="2"><br>
+[@main]<br>
+#IF<br>
+CHECKGOLD 5000<br>
+#ACT<br>
+SENDMSG 5 你有5000金币<br>
+#ELSEACT<br>
+SENDMSG 5 你没有5000金币<br>
+<br>
+[@main2]<br>
+#IF<br>
+CHECKGOLD 5000 BIND<br>
+#ACT<br>
+SENDMSG 5 你有5000绑定金币<br>
+#ELSEACT<br>
+SENDMSG 5 你没有5000绑定金币<br>
+<br>
+　</font></font></p>
+</font>
+
+</body>
+
+</html>

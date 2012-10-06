@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>NPC对话框动态按钮显示方法&nbsp; 功能</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><font color="#0000FF"><b>NPC对话框动态按钮显示方法</b></font><br>
+<br>
+<b><font color="#0000FF">功能：</font></b><br>
+&nbsp;&nbsp;&nbsp; 达到指定条件后该对话按钮才会显示，否则不显示，适用于任务脚本。<br>
+<br>
+<font color="#0000FF"><b>用法示例：</b></font><br>
+<br>
+[@main]<br>
+#IF<br>
+#ACT<br>
+MOV S0&nbsp;&nbsp;&nbsp; //开始前将S0变量清空<br>
+<br>
+#IF<br>
+CHECKMISSION [111] 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//检测变量[111]是否为1<br>
+#ACT<br>
+INC S0 &lt;&amp;测试按钮/@测试按钮&gt;\&nbsp;&nbsp;&nbsp; //如果为1，将<font color="#800080">&lt;&amp;测试按钮/@测试按钮&gt;\</font>对话按钮赋值到S0变量<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//&nbsp;&nbsp; <font color="#800080">\</font>号为换行符,不加会按钮错位,影响美观<br>
+<br>
+#IF<br>
+#SAY<br>
+&nbsp; 欢迎使用361引擎\ \<br>
+&lt;$STR(S0)&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//变量&lt;$STR(S0)&gt;如果条件满足则会显示出<font color="#800080">&lt;&amp;测试按钮/@测试按钮&gt;</font>的按钮,如果不满足则不显示<br>
+&lt;&amp;关闭/@exit&gt;</font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+地图事件配置详解Mir200\Envir\MapEvent.txt 配置
+
+;触发标识
+; 格式:
+; 标识:值
+;
+; 标识:(-1 - 800) -1 代表不检查标识
+; 值: (0 - 1)
+;
+;
+
+;触发条件
+
+; 格式:
+; 代码:物品:组队;
+; 代码:
+; 0:无效
+; 1:扔物品
+; 2:捡物品
+; 3:挖矿
+; 4:走路(不支持物品条件)
+; 5:跑步(不支持物品条件)
+; 6:骑马(不支持物品条件)
+
+; 物品:(物品名称 - *) * 代表不需要物品
+; 组队:(0 - 1) 0为不需要组队，1为必须组队才触发
+
+;触发机率
+; 数字越大，机率越低
+; 范围:(0 - 999999) 0 的机率为100%
+
+;事件类型
+; 格式
+; 代码:内容
+
+; 代码:(现在只支持脚本事件)
+; 0:无效
+; 1:调用脚本(调用QMapEvent-0.txt中的内容)
+;注意事项
+;
+; 在相同地图座标，不支持相同触发标识及条件(触发条件中的物品名称除外)，如果有相同的设置，只有最后一个设置有效
+
+;地图号 座标X 座标Y 范围 触发标识 触发条件 触发机率 事件类型
+;和翎风不同的我们这里增加一个范围,如果范围的值是0 那么必须在这个坐标上才能触发，否则只要进入这个坐标的范围就会触发
+
+3 333 333 0 -1:1 1:回城卷:0 2 1:@MapEventDropItem
+3 333 333 0 -1:1 2:回城卷:0 2 1:@MapEventPickUpItem
+3 338 331 0 -1:1 3:*:0 2 1:@MapEventMine
+3 330 330 0 -1:1 4:*:0 2 1:@MapEventWalk
+3 331 335 0 -1:1 5:*:0 2 1:@MapEventRun
+3 330 328 0 -1:1 6:*:0 2 1:@MapEventHorseRun
+
+QFunction-0.txt
+
+[@MapEventDropItem]
+#if
+#act
+Messagebox MapEventDropItem
+
+[@MapEventPickUpItem]
+#if
+#act
+Messagebox MapEventPickUpItem
+
+[@MapEventMine]
+#if
+#act
+Messagebox MapEventMine
+
+[@MapEventWalk]
+#if
+#act
+Messagebox MapEventWalk
+
+[@MapEventRun]
+#if
+#act
+Messagebox MapEventRun
+
+[@MapEventHorseRun]
+#if
+#act
+Messagebox MapEventHorseRun

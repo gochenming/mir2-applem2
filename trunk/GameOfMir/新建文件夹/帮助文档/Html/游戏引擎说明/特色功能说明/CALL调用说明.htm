@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>#CALL调用说明</TITLE>
+</HEAD>
+<BODY>
+<P><STRONG style="font-weight: 400">
+<FONT size=2 face="Fixedsys" color="#0000FF">#CALL调用新格式说明</FONT></STRONG></P>
+<P><font face="Fixedsys" size="2">#CALL调用支持<font color="#FF0000">传统方式</font>和<font color="#FF0000">新方式</font>两种格式，该功能可以在M2上的 参数设置 - 环境设置 - #CALL调用设置 上进行选择</font></P>
+<P><font face="Fixedsys" size="2">两种方式的调用方法都是一样的： #CALL [\\XXX\XXX\XXX.txt] @XXX<br>
+区别在于M2翻译后的内容</font></P>
+<P><font face="Fixedsys" size="2" color="#0000FF"><strong>传统方式：</strong></font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;文件1.txt内容：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[@main]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#CALL [\\XXX\2.txt] @test </font> </P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;文件2.txt内容:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[@test]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#IF<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#ACT<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;SENDMSG 1 test <br>
+&nbsp;&nbsp;&nbsp;  }</font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;M2翻译后的内容<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;[@main]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;#ACT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GOTO @test</font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;&nbsp;&nbsp;[@test]<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;#IF<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;#ACT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SENDMSG 1 test</font></P>
+<P>  <font face="Fixedsys" size="2">  <br>
+<font color="#0000FF">
+<strong>新方式：</strong></font></font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;文件1.txt内容：<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;[@main]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;#CALL [\\XXX\2.txt] @test </font> </P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;文件2.txt内容:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;[@test]<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;#IF<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;#ACT<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;SENDMSG 1 test <br>
+  &nbsp;&nbsp;&nbsp;  }</font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;M2翻译后的内容<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;[@main]
+  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;#IF<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#ACT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SENDMSG 1 test</font></P>
+<P>　</P>
+<P><font face="Fixedsys" size="2"><font color="#0000FF">
+<strong style="font-weight: 400">另外除了脚本文件外，部分文件也支持新方式#CALL调用设置</strong></font><br>
+  DefiniensConst.txt 脚本常量<br>
+    MakeItem.txt 打造物品  <br>
+    MapInfo.txt 地图信息<br>
+    MapEvent.txt 地图事件<br>
+    MonGen.txt 刷怪配置  <br>
+</font>
+</P>
+<P><font face="Fixedsys" size="2"><BR>
+  <BR>
+</font>
+</P>
+</BODY>
+</HTML>

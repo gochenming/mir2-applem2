@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>爆率说明</TITLE>
+</HEAD>
+<BODY>
+<P><STRONG><FONT size=2 face="Fixedsys" color="#0000FF">增强爆率设置方法</FONT></STRONG></P>
+<P><font face="Fixedsys" size="2"><strong><font color="#0000FF">爆率设置方式一：(传统设置)</font><br>
+</strong><br>
+&nbsp;&nbsp;格式： 几率&nbsp;&nbsp;&nbsp;&nbsp;物品名称&nbsp;&nbsp;&nbsp;&nbsp;(数量)&nbsp;<strong>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;示例： 1/1&nbsp;&nbsp;&nbsp; 万年雪霜 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</font></P>
+<P><font face="Fixedsys" size="2" color="#0000FF"><strong>爆率设置方式二： (新格式) </strong>
+</font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;格式： #CHILD&nbsp;&nbsp;几率&nbsp; RANDOM&nbsp;&nbsp;&nbsp;里面的爆率设置要使用()包围起来<br>
+  &nbsp;&nbsp;示例：<br>
+  &nbsp;&nbsp;#CHILD 1/1 RANDOM <br>
+  &nbsp;&nbsp;(<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1/1	圣殿之刃<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1/1	圣殿宝甲 <br>
+  &nbsp;&nbsp;)<br>
+  &nbsp;&nbsp;说明：#CHILD 固定命令不能更改<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;几率&nbsp;当符合几率条件时才会执行()里的爆率设置<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RANDOM 固定值，当加入该条件后，()里的爆率设置几率将无效，系统而是从()里随机抽取一件物品爆出  
+</font> </P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;<br>
+  <font color="#0000FF">
+  <strong>新爆率设置的主要应用特色说明</strong></font></font></P>
+<P><font face="Fixedsys" size="2">&nbsp;&nbsp;在传统的爆率设置中，由于爆率随机性的缺点，对于爆出的物品无法精确控制。<br>
+&nbsp; 例如：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1/4 天尊头盔<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1/4 天尊项链<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1/4 天尊手镯<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1/4 天尊戒指 <br>
+&nbsp;&nbsp;以上设置，在怪物爆出物品时无法控制每次只爆出一件，系统有可能爆出两件或四件，也有可能一件都不爆。<br>
+<br>
+&nbsp;&nbsp;新方式：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#CHILD 1/1 RANDOM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/1 天尊头盔<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/1 天尊项链<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/1 天尊手镯<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/1 天尊戒指 <br>
+&nbsp;&nbsp;&nbsp;&nbsp; )<br>
+&nbsp;&nbsp;使用这种方式后，可以确保每次只随机爆出其中的一件物品。</font></P>
+<P>　</P>
+<P><font face="Fixedsys" size="2"><BR>
+  <BR>
+</font>
+</P>
+</BODY>
+</HTML>

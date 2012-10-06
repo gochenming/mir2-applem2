@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{2696E004-9982-4694-8A90-49D424881AD8}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    <Projects>
+      <Projects Name="GameCenter.exe">GameOfMir\GameCenter\GameCenter.bdsproj</Projects>
+      <Projects Name="DBServer.exe">GameOfMir\DBServer\DBServer.bdsproj</Projects>
+      <Projects Name="LogDataServer.exe">GameOfMir\LogDataServer\LogDataServer.bdsproj</Projects>
+      <Projects Name="LoginGate.exe">GameOfMir\LoginGate\LoginGate.bdsproj</Projects>
+      <Projects Name="LoginSrv.exe">GameOfMir\LoginSrv\LoginSrv.bdsproj</Projects>
+      <Projects Name="M2Server.exe">GameOfMir\M2Engine\M2Server.bdsproj</Projects>
+      <Projects Name="RunGate.exe">GameOfMir\RunGate\RunGate.bdsproj</Projects>
+      <Projects Name="SelGate.exe">GameOfMir\SelGate\SelGate.bdsproj</Projects>
+      <Projects Name="Targets">GameCenter.exe DBServer.exe LogDataServer.exe LoginGate.exe LoginSrv.exe M2Server.exe RunGate.exe SelGate.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

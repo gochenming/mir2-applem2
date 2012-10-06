@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="更新日志">
+		<param name="Local" value="Html\更新日志.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="游戏引擎说明">
+		<param name="Local" value="Html\main.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="特殊功能说明">
+			<param name="Local" value="Html\main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="#CALL新调用说明">
+				<param name="Local" value="Html\游戏引擎说明\特色功能说明\CALL调用说明.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="新爆率设置说明">
+				<param name="Local" value="Html\游戏引擎说明\特色功能说明\爆率说明.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NPC对话框功能说明">
+				<param name="Local" value="Html\游戏引擎说明\特色功能说明\NPC对话框特效.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="任务系统说明">
+			<param name="Local" value="Html\main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="任务提示说明一">
+				<param name="Local" value="Html\游戏引擎说明\任务系统说明\任务提示说明.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="任务提示说明二">
+				<param name="Local" value="Html\游戏引擎说明\任务系统说明\任务提示说明二.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="脚本命令详解">
+			<param name="Local" value="Html\main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="自定义脚本常量">
+				<param name="Local" value="Html\游戏引擎说明\脚本命令详解\自定义脚本常量.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="脚本实例">
+				<param name="Local" value="Html\main.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="任务脚本">
+					<param name="Local" value="Html\游戏引擎说明\脚本命令详解\脚本实例\任务脚本.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

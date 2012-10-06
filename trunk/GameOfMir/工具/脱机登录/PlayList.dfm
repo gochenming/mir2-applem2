@@ -1,0 +1,63 @@
+object FormList: TFormList
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = #29992#25143#21015#34920
+  ClientHeight = 405
+  ClientWidth = 189
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = #23435#20307
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 12
+  object pnl1: TPanel
+    Left = 0
+    Top = 0
+    Width = 189
+    Height = 41
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = 16
+    ExplicitTop = 200
+    ExplicitWidth = 185
+    object btn1: TButton
+      Left = 16
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = #21047#26032#21015#34920
+      TabOrder = 0
+      OnClick = btn1Click
+    end
+    object btn2: TButton
+      Left = 97
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = #36873#25321#33258#24049
+      TabOrder = 1
+      OnClick = btn2Click
+    end
+  end
+  object lst1: TListBox
+    Left = 0
+    Top = 41
+    Width = 189
+    Height = 364
+    Align = alClient
+    ItemHeight = 12
+    TabOrder = 1
+    OnDblClick = lst1DblClick
+    ExplicitLeft = 48
+    ExplicitTop = 168
+    ExplicitWidth = 121
+    ExplicitHeight = 97
+  end
+end

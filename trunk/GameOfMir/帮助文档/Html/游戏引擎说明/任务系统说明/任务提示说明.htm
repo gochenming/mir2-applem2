@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META name="GENERATOR" content="QuickCHM">
+<TITLE>任务提示说明</TITLE></HEAD>
+<BODY>
+<P><strong><font size="5">任务提示文本说明</font></strong></P>
+<P><strong>配置文件位置</strong><BR>
+Mir200\Envir\MissionDesc.txt</P>
+<P>这个文件主要是控制客户端的任务窗口内容和NPC头顶上的提示特效显示</P>
+<P><strong>配置文件格式</strong> (以下信息，最好结合配置实例进行理解) </P>
+<P>[标识名称] ---------&gt; 该名称为唯一的不能出现重复，长度不能超过7个汉字，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">ADDMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">UPDATEMISSION</a><br>
+  NPC_地图= ----------&gt; 对应NPC所在的地图显示名称，例如：比奇省 <br>
+  NPC_坐标X= ---------&gt; 对应NPC所在的坐标X <br>
+  NPC_坐标Y= ---------&gt; 对应NPC所在的坐标Y <br>
+  <font color="#FF00FF">是否过程</font>= ----------&gt; 只能为0或1，当为0时下面为<font color="#0000FF">蓝色</font>的参数才会生效(接受任务提示使用)，当为1时下面<font color="#FF0000">红色</font>的参数才会生效(结束任务提示使用)<br>
+    <font color="#0000FF">可接任务提示</font>= ------&gt; 当未接受该任务时显示在任务窗口中可接任务列表里的内容 <br>
+      <font color="#0000FF">可接任务地图</font>= ------&gt; 当未接受该任务时，点击可接任务列表里的内容，自动移动时的地图和坐标。例如：比奇省,330,330 <br>
+      <font color="#0000FF">循环次数</font>= ----------&gt; 任务循环使用的次数<br>
+      <font color="#0000FF">循环变量</font>= ----------&gt; 任务循环使用的变量，<a href="../脚本命令详解/脚本实例/任务脚本.htm">点击查看循环变量</a><br>
+  <font color="#0000FF">条件_变量</font>= ---------&gt; 100-800 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#0000FF">条件_变量值</font>= -------&gt; 0或1 当人物对应变量的值符合要求，则提示可以接受该任务 <br>
+  <font color="#0000FF">条件_变量2</font>= --------&gt; 100-800 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#0000FF">条件_变量值2</font>= ------&gt; 0或1 当人物对应变量2的值符合要求，则提示可以接受该任务 <br>
+  <font color="#0000FF">条件_变量3</font>= --------&gt; 100-800 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#0000FF">条件_变量值3</font>= ------&gt; 0或1 当人物对应变量3的值符合要求，则提示可以接受该任务<br>
+  <font color="#0000FF">条件_最低等级</font>= -----&gt; 可以接受该任务的最低等级 <br>
+  <font color="#0000FF">条件_最高等级</font>= -----&gt; 可以接受该任务的最高等级 <br>
+  <font color="#0000FF">条件_职业</font>= ---------&gt; 可以接受该任务的职业 <br>
+  <font color="#0000FF">条件_性别</font>= ---------&gt; 可以接受该任务的性别 <br>
+  <font color="#FF0000">任务分类</font>= ----------&gt; 指定任务属于那一种分类，没有实际意义，主要用于分类显示。例如设置为：(主线任务/支线任务/循环任务/随机任务) <br>
+  <font color="#FF0000">任务名称</font>= ----------&gt; 显示在任务窗口中任务分类里的名称 <br>
+  <font color="#FF0000">隐藏显示</font>= ----------&gt; 0或1，设置为1时则不在任务窗口中显示任务信息<br>
+  <font color="#FF0000">注销任务标识</font>= ------&gt; 不允许注销任务，则设置为0或留空，相反则填写大于0的整数，详情查看<a href="../脚本命令详解/脚本实例/任务脚本.htm">注销任务</a><br>
+  <font color="#FF0000">结束_变量</font>= ---------&gt; 1-799 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#FF0000">结束_变量值</font>= -------&gt; 0或1 当人物对应变量的值符合要求，则提示可以完成该任务，否则提示未完成该任务<br>
+  <font color="#FF0000">结束_变量2</font>= --------&gt; 1-799 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#FF0000">结束_变量值2</font>= ------&gt; 0或1 当人物对应变量2的值符合要求，则提示可以完成该任务，否则提示未完成该任务<br>
+  <font color="#FF0000">结束_变量3</font>= --------&gt; 1-799 任务系统专用变量，应用于脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHECKMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">SETMISSION</a> <a href="../脚本命令详解/脚本实例/任务脚本.htm">RESETMISSION</a><br>
+  <font color="#FF0000">结束_变量值3</font>= ------&gt; 0或1 当人物对应变量3的值符合要求，则提示可以完成该任务，否则提示未完成该任务<br>
+  <font color="#FF0000">结束_物品</font>= ---------&gt; 物品名称，用于显示提示需要什么物品才能完成任务<br>
+  <font color="#FF0000">结束_物品数量</font>= -----&gt; 需要的物品数量<br>
+  <font color="#FF0000">结束_物品2</font>= --------&gt; 物品名称，用于显示提示需要什么物品才能完成任务 <br>
+  <font color="#FF0000">结束_物品数量2</font>= ----&gt; 需要的物品数量<br>
+  <font color="#FF0000">结束_物品3</font>= --------&gt; 物品名称，用于显示提示需要什么物品才能完成任务 <br>
+  <font color="#FF0000">结束_物品数量3</font>= ----&gt; 需要的物品数量<br>
+  <font color="#FF0000">结束_杀怪名称1</font>= ----&gt; 需要消灭的怪物名称，用于显示提示需要消灭什么怪物才能完成任务<br>
+  <font color="#FF0000">结束_杀怪数量1</font>= ----&gt; 消灭怪物的数量，使用脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHANGEMISSIONKILLMONCOUNT</a> 控制数量 <br>
+  <font color="#FF0000">结束_杀怪名称2</font>= ----&gt; 需要消灭的怪物名称，用于显示提示需要消灭什么怪物才能完成任务<br>
+  <font color="#FF0000">结束_杀怪数量2</font>= ----&gt; 消灭怪物的数量，使用脚本命令 <a href="../脚本命令详解/脚本实例/任务脚本.htm">CHANGEMISSIONKILLMONCOUNT</a> 控制数量<br>
+{<br>
+要在任务窗口中显示的内容,<a href="任务提示说明二.htm">点击查看特殊设置方法</a><br>
+}</P>
+<P><br>
+</P>
+<P><strong>配置文件实例</strong></P>
+<P><strong>接受任务<br>
+  </strong>[测试任务_接受]<strong><br>
+</strong>NPC_地图=比奇省<br>
+NPC_坐标X=330<br>
+NPC_坐标Y=330<br>
+<font color="#FF00FF">是否过程</font>=0<br>
+<font color="#0000FF">可接任务提示</font>=主线 测试任务 比奇省(330,330)<br>
+<font color="#0000FF">可接任务地图</font>=比奇省,330,330<br>
+<font color="#0000FF">循环次数</font>=0<br>
+<font color="#0000FF">循环变量</font>=0<a href="#"></a><br>
+<font color="#0000FF">条件_变量</font>=100<a href="#"></a><br>
+<font color="#0000FF">条件_变量值</font>=1<br>
+<font color="#0000FF">条件_变量2</font>=101<a href="#"></a><br>
+<font color="#0000FF">条件_变量值2</font>=0 <br>
+<font color="#0000FF">条件_变量3</font>=0<a href="#"></a><br>
+<font color="#0000FF">条件_变量值3</font>=0<br>
+<font color="#0000FF">条件_最低等级</font>=0<br>
+<font color="#0000FF">条件_最高等级</font>=65535<br>
+<font color="#0000FF">条件_职业</font>=<br>
+<font color="#0000FF">条件_性别</font>=<br>
+以上信息，当人物的任务变量值 100为1 且 101为0 时，则提示可以接受该任务</P>
+<P><strong>完成任务</strong> <br>
+[测试任务_完成]<br>
+NPC_地图=比奇省<br>
+NPC_坐标X=330<br>
+NPC_坐标Y=330<br>
+<font color="#FF00FF">是否过程</font>=1<br>
+<font color="#FF0000">任务分类</font>=主线任务<br>
+<font color="#FF0000">任务名称</font>=测试任务<br>
+<font color="#FF0000">隐藏显示</font>=0<br>
+<font color="#FF0000">注销任务标识</font>=0<a href="#"></a><br>
+<font color="#FF0000">结束_变量</font>=101<a href="#"></a><br>
+<font color="#FF0000">结束_变量值</font>=1<br>
+<font color="#FF0000">结束_变量2</font>=102<a href="#"></a><br>
+<font color="#FF0000">结束_变量值2</font>=0<br>
+<font color="#FF0000">结束_变量3</font>=<a href="#"></a><br>
+<font color="#FF0000">结束_变量值3</font>=<br>
+<font color="#FF0000">结束_物品</font>=测试物品<br>
+<font color="#FF0000">结束_物品数量</font>=2<br>
+<font color="#FF0000">结束_物品2</font>= <br>
+<font color="#FF0000">结束_物品数量2</font>=<br>
+<font color="#FF0000">结束_物品3</font>=<br>
+<font color="#FF0000">结束_物品数量3</font>=<br>
+<font color="#FF0000">结束_杀怪名称1</font>=鸡<br>
+<font color="#FF0000">结束_杀怪数量1</font>=5 <br>
+<font color="#FF0000">结束_杀怪名称2</font>=<br>
+<font color="#FF0000">结束_杀怪数量2</font>=<br>
+以上信息 当人物 101为1 且 102为0 且 拥有测试物品数量2 且 消灭了5只鸡，则提示可以完成该任务。否则提示未完成该任务</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp; </P>
+</BODY>
+</HTML>

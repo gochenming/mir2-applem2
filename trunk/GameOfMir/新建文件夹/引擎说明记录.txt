@@ -1,0 +1,552 @@
+OK	//顶部滚动公告
+在Mir200\Notice\LineNotice.txt的公告前加大写字母 T 就可以实现顶部滚动公告，每条滚动公告会自动循环三次。
+
+
+OK	//如何清除天下第一及全局变量
+删除Mir200\Global.ini文件，M2运行后会重新生成一份干净Global.ini全局数据
+
+
+OK	//宝箱配置
+宝箱分为两种：
+一种是物品宝箱在StdItems.DB里设置；一种是怪物宝箱，直接分散在地图上的那种在Monster.DB里设置。
+一、StdItems.DB中Anicount字段值如果为0时则开起转动抽取物品；如为100时，不通过转动，打开宝箱直接给物品。
+Source字段值对应D:\MirServer\Mir200\Envir\BoxList.txt，宝箱设置文件在Envir\Boxs\文件夹下。
+二、Monster.DB中Lvl字段值对应D:\MirServer\Mir200\Envir\BoxList.txt
+CoolEye字段值跟StdItems.DB的Anicount值一样为0-100
+宝箱文本头说明：
+机率0-100 0代表100%参与抽奖，数字越大参与的可能性越小
+机率 金币 元宝 机率 金币 元宝 机率 金币 元宝 机率 金币 元宝
+0 0 5 70 0 10 90 0 15 90 0 20
+
+OK	//检测是否为新人
+#IF
+ISNEWHUMAN
+#SAY
+你是新人
+#ELSESAY
+你不是新人
+
+OK	//个人定时器
+;格式  时间(秒) 调用脚本 脚本标识(用于结束定时器)
+DelayGoto 1 @tese 标识
+
+结束定时器(结束DelayGoto的标识)
+ClearDelayGoto 标识
+
+脚本示例：
+[@免费闭关]
+#IF
+#ACT
+CHANGEEXP + 5000
+DelayGoto 1 @免费闭关 每秒加经验
+
+[@结束加经验]
+#IF
+#ACT
+ClearDelayGoto 每秒加经验
+
+OK	//NPC脚本美化
+格式：{文字=FCO=251}
+如：{欢迎使用361引擎=FCO=253}
+=FCO=(0-255)
+
+OK	//检测是否为管理员
+#IF
+ISADMIN
+#SAY
+你是管理员
+#ELSESAY
+你不是管理员
+
+OK	//系统初始化
+[~Initialize]
+
+在登陆脚本QManage.txt中加入
+功能：服务端运行后由M2只加载一次调用。
+
+OK	//自定义地图连接
+增加连接
+AddRandomMapGate 
+删除连接
+DelRandomMapGate
+
+示例：
+#if
+#act
+;命令 标识(用于删除连接时使用) 起始地图 坐标X 坐标Y 目标地图 坐标X 坐标Y 有效时间 是否显示传送门(1为显示)
+AddRandomMapGate test 3 333 333 0 333 333 0 1
+
+时间以分钟为单位
+
+#if
+#act
+;命令 标识 起始地图名称
+;另外 只有当AddRandomMapGate的有效时间设置为0时，才能使用该命令删除连接，否则地图连接会按有效时间自动删除
+DelRandomMapGate test 3
+
+//SENDMSG 0 - 7 说明
+
+//SENDMSG 美化 #6FFFF/8#6文字#5 注意:文字位置某些字符不能应用其中.
+
+//CHECKMISSIONKILLMONCOUNT [$任务_主线索引变量] 1 < 5
+
+OK	//[@Member]
+OK	//[@StdmodeFuncXX]
+
+//[@GETLARGESSGOLD_ERROR]
+\ \您的操作太频繁，请稍候再试！\ \
+<&关闭/@Exit>
+
+[@GETLARGESSGOLD_FAIL]
+\ \领取元宝失败，原因如下！\ \
+
+　{一、您未进行过充值，没有获赠元宝！=FCO=250}\
+　{二、元宝已经领取过了！=FCO=250}\
+　{三、元宝在其它区被领取过了！=FCO=250}\ \
+<&关闭/@Exit>
+
+[@GETLARGESSGOLD_OK]
+#ACT
+CLOSE
+
+//增加任务扩展
+ADDMISSION 任务索引 任务名称 有效时间(分钟)，不限制时间留空或设置为0
+
+//更新任务有效时间
+UPDATEMISSIONTIME 任务索引 有效时间(分钟)，不限制时间留空或设置为0
+
+任务到时间后M2会自动删除任务并且调用Q_Function.txt 脚本中 [@MISSION_任务名称]
+
+OK	//[@PlayLevelUpEx7]
+
+//刷怪提示脚本讲解
+HOOKOBJECT I0 X
+HOOKOBJECT I1 Y
+
+//任务注销
+[@ClearMission1]
+
+OK	//检测角色职业
+CHECKJOB Warrior	战士
+CHECKJOB Wizard		法师
+CHECKJOB Taoist		道士
+
+OK	//增加技能
+AddSkill
+
+OK	//新旧GIVE命令
+
+OK	//采集系统
+格式：SETGUAGEBAR 时间 完成后调用的过程 提示信息
+
+示例：SETGUAGEBAR 5 @test2 正在采集... 
+
+//刷怪提示
+					//刷新时触发		//死亡时触发		//怪物刷新提前提示(脚本,时间[分钟])	//保存怪物刷新时间的变量（全局I变量）
+
+魔龙教主        150   1     120	0	@刷怪提示_魔龙教主_刷新	@刷怪提示_魔龙教主_死亡 @既将刷新,10 				10
+
+OK	//检测背包大小
+CHECKBAGSIZE
+
+//随机取数
+RANDOM
+
+//宝石限制修改说明
+
+//动态给命令
+DYNAMICGIVE 
+
+//物品绑定 (详细)
+CHANGEGIVEITEM 
+
+//KILLSLAVE
+
+//QMapEvent-0.txt
+
+//#CALL使用方法说明
+
+//新暴率说明
+
+//机器人脚本
+#AutoRun NPC RUNONWEEK
+#AutoRun NPC RUNONDAY
+#AutoRun NPC RUNDATETIME
+
+OK	//清空文本
+CLEARLIST
+
+OK	//SETLIMITEXPLEVEL 设置等级上限和经验
+SETLIMITEXPLEVEL 75 10 1
+SETLIMITEXPLEVEL 最高等级 达到后获得经验比例(0..100) 是否保存设置(1保存)
+
+OK	///全自动攻城
+STARTWALLCONQUESTWAR
+
+OK	//ISUNDERWAR
+
+//脚本常量说明
+DefiniensConst.txt
+
+//巡逻卫士设置
+巡逻卫士  2k_0      [131,130|125,136|121,136|120,140|116,145|113,145|107,150|130,172|136,166|142,166|145,163|169,163|169,151|157,139|149,139|140,130]     : 7
+
+//MakeItem.txt
+
+//MakeMagic.txt
+
+//小地图标注说明
+MapDesc.txt
+
+//MapEvent.txt
+
+//地图参数
+
+//MapQuest.txt
+
+//MissionDesc.txt
+
+//怪物说话
+MonSayMsg.txt
+
+//地图安全区设置
+StartPoint.txt
+
+//物品解包
+UnbindList.txt
+
+//CHECK常量.txt
+
+//NPC对话框调用补丁图片说明
+
+//NPC对话按钮 <&介绍/@介绍>
+
+//<&界面图解/~@image_interface>\
+
+//<&装备图解/~@image_arming>\
+
+//微调脚本显示字符
+{3=y}
+{52=x}
+
+//五形系统详细介绍
+
+//　命令说明　　　　　　　命令\ \
+　查看当前服务器时间　　{@<$CMD_DATE>=FCO=243}\
+　拒绝指定人物私聊信息　{@<$CMD_PRVMSG>=FCO=243}\
+　拒绝所有人物私聊信息　{@<$CMD_ALLOWMSG>=FCO=243}\
+　拒绝队伍聊天信息　　　{@<$CMD_LETSHOUT>=FCO=243}\
+　拒绝行会聊天信息　　　{@<$CMD_BANGUILDCHAT>=FCO=243}\
+　拒绝交易申请　　　　　{@<$CMD_LETTRADE>=FCO=243}\
+　允许加为好友　　　　　{@<$CMD_ALLOWFIREND>=FCO=243}\
+　允许加入行会　　　　　{@<$CMD_LETGUILD>=FCO=243}\
+　退出当前所在行会　　　{@<$CMD_ENDGUILD>=FCO=243}\
+　允许行会联盟　　　　　{@<$CMD_AUTHALLY>=FCO=243}\
+　进行行会联盟　　　　　{@<$CMD_AUTH>=FCO=243}\
+　联消行会联盟　　　　　{@<$CMD_AUTHCANCEL>=FCO=243}\
+　移动到地图指定座标　　{@<$CMD_USERMOVE>=FCO=243}\
+　{（需要戴传送装备）=FCO=242}\
+　探测人物所在位置　　　{@<$CMD_SEARCHING>=FCO=243}\
+　{（需要戴探测装备）=FCO=242}\
+　允许队伍传送　　　　　{@<$CMD_ALLOWGROUPCALL>=FCO=243}\
+　将组队人员传送到身边　{@<$CMD_GROUPRECALLL>=FCO=243}\
+　{（需要戴记忆全套）=FCO=242}\
+　查询配偶位置　　　　　{@<$CMD_DEAR>=FCO=243}\
+　允许夫妻传送　　　　　{@<$CMD_ALLOWDEARRCALL>=FCO=243}\
+　将配偶传送到身边　　　{@<$CMD_DEARRECALL>=FCO=243}\
+　查询师徒位置　　　　　{@<$CMD_MASTER>=FCO=243}\
+　允许师徒传送　　　　　{@<$CMD_ALLOWMASTERRECALL>=FCO=243}\
+　将徒弟召唤到身边　　　{@<$CMD_MASTERECALL>=FCO=243}\
+　千里传音　　　　　　　{@<$CMD_ALLSYSMSG>=FCO=243}\
+　帮助系统　　　　　　　{@<$CMD_MEMBERFUNCTIONEX>=FCO=243}\ \
+
+如果NPC脚本头要调用NPC名字，必须加上 $RESETLABEL
+如：
+#IF
+#SAY
+$RESETLABEL
+{<$SELFNAME>=FCO=243}：\
+你好！
+
+//　{i.432=item}{56=x}{6=y}<暗青之石1级/@游戏服务_龙令对换_确认对换_检测铜龙令(暗青之石1级,1,1)>\{69=x}{2=y}{需要1个铜龙令=FCO=206}{4=y}\
+
+//@@InputInteger8
+
+OK	//地图传送命令
+MAPMOVE
+
+//DAYOFWEEK
+
+//CHECKGAMEGIRD > [$检测修练值必需大于]
+
+OK	//检测人物所在地图
+CHECKMAPNAME 3
+
+//仓库租用
+仓库三：{<$STORAGE3STATE>=FCO=250}\ \
+STORAGETIMECHANGE 3 + [$租用仓库时间]
+
+OK	//检测人物等级
+CHECKLEVELEX
+
+OK	//检测人物金币数
+CHECKGOLD
+
+OK	//NOT CHECK
+
+OK	//CHECKITEMCOUNT 金条 ? 1
+
+OK	//TAKECOUNT
+
+//CHECKGAMEGOLD ? 
+GAMEGOLD
+
+//装备强化
+(@ArmStrengthen)
+@ArmStrengthen
+
+//装备开光
+(@ArmUnseal)
+@ArmUnseal
+
+OK	//卸下宝石脚本
+;脚本头
+(@ArmRemoveStone)
+
+[@main]
+　有什么我可以帮你的。\ \
+<&装备强化/@ArmStrengthen>\
+<&装备开光/@ArmUnseal>\
+<&卸下宝石/@ArmRemoveStone>\
+<&关闭/@exit>\
+
+卸下宝石道具
+Stdmode = 46
+Shape = 9
+
+OK	//装备打造NPC设置方法
+
+OK	//绑定金币
+
+OK	//NPC对话框动态按钮显示方法
+#IF
+#ACT
+MOV S0
+
+INC S0 任务按钮
+<$STR(S0)>
+
+//用绑定金币购买物品
+@BindBuy
+
+//游戏所有变量说明  如<$MAP>
+
+//天下第一脚本
+CHECKSC ? 0 > <$STR(G20)>
+CHECKMC ? 0 > <$STR(G14)>
+CHECKDC ? 0 = <$STR(G8)>
+REFSHOWNAME
+SETEFFIGYSTATE <$STR(G18)> 40
+CHECKLEVELEX 
+CHECKEXP 
+
+OK	//检测人物性别
+GENDER MAN
+
+//CANMOVEECTYPE 祖玛副本
+
+//MOVEECTYPE 祖玛副本 78 81
+
+OK	//ISGROUPMASTER
+
+OK	//检测队伍中职业人数
+CHECKGROUPJOBCOUNT 职业(0..2) 符号(>,<,=,?) 数量 符号(>,<,=,?) 等级
+CHECKGROUPJOBCOUNT 0 > 1 > 45
+
+
+//;副本创建成功
+[@CreateEctype_OK]
+#if
+#act
+CLEARMACHINERYEVENT FBMAP
+CLEARECTYPEMON FBMAP 
+TAKE 金币 [$祖玛副本_进入需要金币]
+MOVEECTYPE 祖玛副本 78 81
+
+;副本创建失败
+[@CreateEctype_Fail]
+#IF
+#ACT
+MESSAGEBOX 创建副本失败，副本人数已满，请稍候再试！
+
+//改变发型
+HAIRSTYLE 
+
+//<$GAMEDIAMOND>
+CHECKGAMEDIAMOND ? <$STR(T1)>
+CHANGEGAMEDIAMOND - <$STR(T1)>
+
+//CHECKSLAVENAME
+
+OK	//检测PK值
+CHECKPKPOINT
+CHANGEPKPOINT 
+
+OK	//ISGUILDMASTER
+
+OK	//ISCASTLEGUILD
+
+//CHECKCASTLESTATE DOOR
+
+//CHECKNAMELIST
+ADDNAMELIST
+DELNAMELIST
+
+//会员系统
+
+OK	//双倍经验
+KILLMONEXPRATE 
+
+//师徒系统
+checkmaster
+checkismaster
+checkposemaster
+POSEHAVEMASTER
+checkposedir
+checkposelevel
+HAVEMASTER
+
+MASTER REQUESTMASTER      ......等等
+
+//打造装备详细配置说明
+
+//SETRANKLEVELNAME
+
+//CREDITPOINT 
+
+OK	//GETRANDOMNAME ../ScriptData/智力问答题库.txt S0
+
+OK	//还原属性点
+RESETNAKEDABILPOINT 点数
+
+洗点珠设置
+Stdmode = 3
+Shape = 18
+DuraMax = 要还原的点数
+
+//
+地图事件触发
+
+地图事件配置详解Mir200\Envir\MapEvent.txt 配置
+
+;触发标识
+; 格式:
+; 标识:值
+;
+; 标识:(-1 - 800) -1 代表不检查标识
+; 值: (0 - 1)
+;
+;
+
+;触发条件
+
+; 格式:
+; 代码:物品:组队;
+; 代码:
+; 0:无效
+; 1:扔物品
+; 2:捡物品
+; 3:挖矿
+; 4:走路(不支持物品条件)
+; 5:跑步(不支持物品条件)
+; 6:骑马(不支持物品条件)
+
+; 物品:(物品名称 - *) * 代表不需要物品
+; 组队:(0 - 1) 0为不需要组队，1为必须组队才触发
+
+;触发机率
+; 数字越大，机率越低
+; 范围:(0 - 999999) 0 的机率为100%
+
+;事件类型
+; 格式
+; 代码:内容
+
+; 代码:(现在只支持脚本事件)
+; 0:无效
+; 1:调用脚本(调用QFunction-0.txt中的内容)
+;注意事项
+;
+; 在相同地图座标，不支持相同触发标识及条件(触发条件中的物品名称除外)，如果有相同的设置，只有最后一个设置有效
+
+;地图号 座标X 座标Y 范围 触发标识 触发条件 触发机率 事件类型
+;和翎风不同的我们这里增加一个范围,如果范围的值是0 那么必须在这个坐标上才能触发，否则只要进入这个坐标的范围就会触发
+
+3 333 333 0 -1:1 1:回城卷:0 2 1:@MapEventDropItem
+3 333 333 0 -1:1 2:回城卷:0 2 1:@MapEventPickUpItem
+3 338 331 0 -1:1 3:*:0 2 1:@MapEventMine
+3 330 330 0 -1:1 4:*:0 2 1:@MapEventWalk
+3 331 335 0 -1:1 5:*:0 2 1:@MapEventRun
+3 330 328 0 -1:1 6:*:0 2 1:@MapEventHorseRun
+
+OK	//功能: 检测人物是否在指定范围之内
+#IF
+CHECKHUMORNPCRANGE 5
+#SAY
+你在我身边5格之内
+#elsesay
+你离我太远了
+
+OK	//增加生活技能脚本命令
+ADDMAKEMAGIC (0..9)
+
+#ACT
+ADDMAKEMAGIC 0   //增加打造武器生活技能
+
+0 - 打造武器
+1 - 打造盔甲
+8 - 打造药品
+9 - 打造材料
+
+//技能数据库	Magic.DB	
+Interval	技能使用间隔
+
+//怪物数据库	Monster.DB
+NotInSafe	是否刷在安全区自动飞离
+
+//物品数据库	StdItems.DB
+AddDamage	伤害加成
+DelDamage	伤害吸收
+HitPoint	准备
+SpeedPoint	敏捷
+Strong		强度
+Luck		幸运
+HitSpeed	攻击速度（已无效）
+AntiMagic	魔法躲避
+PoisonMagic	毒物躲避
+HealthRecover	体力恢复
+SpellRecover	魔法恢复
+PoisonRecover	中毒恢复
+Price		物品价格
+Text		备注说明
+Bind		装备的特殊状态，如永不掉落等设置(用数据库工具编辑)
+
+//翅膀外观计算
+
+//配带要求计算
+
+//物品类型
+
+//变量使用记录
+
+
+
+
+
+
+
+
+
+
+
+

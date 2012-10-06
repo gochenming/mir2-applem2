@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>自定义采集系统&nbsp; 格式</title>
+</head>
+
+<body>
+
+<p><font face="Fixedsys"><b><font color="#0000FF">自定义采集系统</font></b><br>
+<br>
+<font color="#0000FF"><b>格式：</b></font><br>
+&nbsp;&nbsp;&nbsp; SETGUAGEBAR 时间(秒) 完成后调用的过程 提示信息<br>
+<br>
+<font color="#0000FF"><b>示例：</b></font><br>
+<br>
+[@main]<br>
+#ACT<br>
+SETGUAGEBAR 5 @test2 正在采集... <br>
+<br>
+[@test2]<br>
+#ACT<br>
+GIVE 忍冬滕 1<br>
+SENDMSG 5 你采集到一棵忍冬滕</font></p>
+
+</body>
+
+</html>
